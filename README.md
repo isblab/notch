@@ -56,9 +56,8 @@ and `NCORES` is the number of cores on which replica exchange is to be carried o
 A separate directory named `sampcon` was created and a `density_COMPLEXNAME.txt` file was added to it. This file contains the details of the domains to be split for plotting the localisation probability densities. Finally, sampling exhaustiveness tests were performed using `imp-sampcon`. \
 
 
-# TODO
 #### 3. Analysing the major cluster
-* Contact maps were plotted for the NuDe models as follows: `scripts/COMPLEXNAME/contact_maps_notch_COMPLEXNAME.py` \
+* Contact maps were plotted for the models as follows: `scripts/COMPLEXNAME/contact_maps_notch_COMPLEXNAME.py` \
     _Please use `--help` for `contact_maps_all_pairs_surface.py` script for more details._ \
 * One can also run the `scripts/contact_map_prettify.py` after this. 
 
