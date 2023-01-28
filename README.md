@@ -2,8 +2,6 @@
 
 This repository is of the integrative model of Notch-ligand complexes based on data from X-ray crystallography, NMR, Ca2+ binding experiments, homology modeling, and stereochemistry. It contains input data, scripts for modeling and results including bead models and localization probability density maps. The modeling was performed using [IMP](https://integrativemodeling.org) (*Integrative Modeling Platform*).
 
-TODO: add workflow figure
-
 ## Directory structure
 1. [inputs](inputs/) : contains the subdirectories for the input data used for modeling all the subcomplexes.
 2. [scripts](scripts/) : contains all the scripts used for modeling and analysis of the models.
@@ -16,7 +14,7 @@ These are the independent simulations:
 
 ## Protocol
 ### Sampling
-To run the sampling, run modeling scripts like this \
+To run the sampling, run modeling scripts like this 
 ```
 for runid in `seq 1 NRUNS` ; do mpirun -np NCORES $IMP python scripts/modeling_COMPLEXNAME_rigid.py prod $runid ; done
 ```
@@ -35,30 +33,30 @@ and `NCORES` is the number of cores on which replica exchange is to be carried o
       `$IMP run_analysis_trajectories.py modeling run_ `\
       where, `$IMP` is the setup script corresponding to the IMP installation directory (omit for binary installation), \
       `modeling` is the directory containing all the runs and \
-      `run_` is the prefix for the names of individual run directories.\
+      `run_` is the prefix for the names of individual run directories.
       
 
   2. Then run `variable_filter_COMPLEXNAME.py` on the major cluster obtained as follows: \
       `$IMP variable_filter_COMPLEXNAME.py -c N -g MODEL_ANALYSIS_DIR`
       where, `$IMP` is the setup script corresponding to the IMP installation directory (omit for binary installation), \
       `N` is the cluster number of the major cluster, \
-      `MODEL_ANALYSIS_DIR` is the location of the directory containing the selected_models*.csv. \  
+      `MODEL_ANALYSIS_DIR` is the location of the directory containing the selected_models*.csv.   
   _Please also refer to the comments in the `variable_filter_COMPLEXNAME.py` for more details._
 
   3. The selected good scoring models were then extracted using `run_extract_good_scoring_models.py` as follows: \
       `$IMP python run_extract_good_scoring_models.py modeling run_ CLUSTER_NUMBER` \
       where, `$IMP` is the setup script corresponding to the IMP installation directory (omit for binary installation), \
       `modeling` is the path to the directory containing all the individual runs and \
-      `CLUSTER_NUMBER` is the number of the major cluster to be extracted.\
+      `CLUSTER_NUMBER` is the number of the major cluster to be extracted.
       
 
 #### 2. Running the sampling exhaustiveness tests (Sampcon)
-A separate directory named `sampcon` was created and a `density_COMPLEXNAME.txt` file was added to it. This file contains the details of the domains to be split for plotting the localisation probability densities. Finally, sampling exhaustiveness tests were performed using `imp-sampcon`. \
+A separate directory named `sampcon` was created and a `density_COMPLEXNAME.txt` file was added to it. This file contains the details of the domains to be split for plotting the localisation probability densities. Finally, sampling exhaustiveness tests were performed using `imp-sampcon`. 
 
 
 #### 3. Analysing the major cluster
 * Contact maps were plotted for the models as follows: `scripts/COMPLEXNAME/contact_maps_notch_COMPLEXNAME.py` \
-    _Please use `--help` for `contact_maps_all_pairs_surface.py` script for more details._ \
+    _Please use `--help` for `contact_maps_all_pairs_surface.py` script for more details._ 
 * One can also run the `scripts/contact_map_prettify.py` after this. 
 
 
@@ -72,7 +70,7 @@ For each of the simulations, the following files are in the [results](results/) 
 For the NuDe models, `mutation_colored_model.rmf` and `Distance_Maps` are also added.
 
 ### Information
-**Author(s):** Arastu Pandey, Shreyas Arvindekar, Pratiksha Mall, Shruthi Viswanath\
+**Author(s):** Arastu Pandey, Shreyas Arvindekar, Shruthi Viswanath\
 **Date**: \
 **License:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
