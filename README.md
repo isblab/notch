@@ -2,6 +2,8 @@
 
 This repository is of the integrative model of Notch-ligand complexes based on data from X-ray crystallography, NMR, Ca2+ binding experiments, homology modeling, and stereochemistry. It contains input data, scripts for modeling and results including bead models and localization probability density maps. The modeling was performed using [IMP](https://integrativemodeling.org) (*Integrative Modeling Platform*).
 
+![four_stage_figure](FigS3.png)
+
 ## Directory structure
 1. [inputs](inputs/) : contains the subdirectories for the input data used for modeling all the subcomplexes.
 2. [scripts](scripts/) : contains all the scripts used for modeling and analysis of the models.
