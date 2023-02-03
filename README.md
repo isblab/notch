@@ -58,7 +58,7 @@ A separate directory named `sampcon` was created and a `density_COMPLEXNAME.txt`
 
 #### 3. Analysing the major cluster
 * Contact maps were plotted for the models as follows: `scripts/COMPLEXNAME/contact_maps_notch_COMPLEXNAME.py` \
-    _Please use `--help` for `contact_maps_all_pairs_surface.py` script for more details._ 
+    _Please use `--help` script for more details._ 
 * One can also run the `scripts/contact_map_prettify.py` after this. 
 
 
