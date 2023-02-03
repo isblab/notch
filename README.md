@@ -69,7 +69,6 @@ For each of the simulations, the following files are in the [results](results/) 
 * `cluster_center_model.rmf3` : representative bead model of the major cluster
 * `chimera_densities.py` : to view the localization densities (.mrc files)
 
-For the NuDe models, `mutation_colored_model.rmf` and `Distance_Maps` are also added.
 
 ### Information
 **Author(s):** Arastu Pandey, Shreyas Arvindekar, Shruthi Viswanath\
